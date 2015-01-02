@@ -1,0 +1,252 @@
+<html>
+    <head>
+        <title>Viktor Lyresten</title>
+        <link href='packages/font-awesome-4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <link href='stylesheets/fonts.css' rel='stylesheet' type='text/css'>
+        <meta name="author" content="Viktor Lyresten">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="viewport" content="width=700">
+        <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">        
+        
+        <style>
+        
+            /* This hides the description, possibly just set temporary */
+            p.description {
+                display: none;
+            }
+            
+			html {
+		        background: black;
+		        color: white;
+		        font-family: 'Lato', 'Arial', sans-serif;
+		        font-size: 1px;
+		        font-weight: 300;
+	        }
+	        * {margin: 0; padding: 0;}
+	        
+            .background-image {
+                position: fixed;
+                top: 0;
+                left: 0;
+                min-height: 100%;
+                min-width: 100%;
+                height: auto;
+                z-index: -1;
+                opacity: 0.28;
+            }
+            
+            .background-image.right {
+                left: auto;
+                right: 0;
+            }
+	        
+	        h1 {
+		        font-size: 92rem;
+		        font-weight: 300;
+		        margin: 24rem 32rem 24rem;
+	        }
+	        
+	        h2 {
+		        font-size: 32rem;
+		        font-weight: 300;
+		        margin: 24rem 32rem 24rem;
+	        }
+            
+            .service-wrapper {
+                max-width: 700px;
+            }
+	        
+	        .service {
+	        	display: table-cell;
+	        	min-width: 128rem;
+	        	height: 33%;
+	        	height: 128rem;
+		        text-align: center;
+		        text-transform: lowercase;
+		        margin: 18rem;
+		        float: left;
+                transition: all s;
+                text-decoration: none;
+	        }
+	        .service-stop {
+		        clear: both;
+	        }
+	        
+	        .service.link:hover {
+		        text-shadow: 0rem 0rem 20rem #00a3ff;
+		        cursor: hand;
+	        }
+	        
+	        .service .icon {
+	        	margin-top: 8rem;
+		        font-size: 80rem;
+		        padding-bottom: 0;
+	        }
+	        
+	        .service .name {
+		        font-size: 24rem;
+		        font-weight: 300;
+		        margin: 0;
+	        }
+	        
+	        .service .description {
+		        font-size: 14rem;
+		        font-weight: 300;
+		        margin: 0;
+            }
+            
+            .blink {
+                transition: all 1s;
+                opacity: 0;
+                color: #00a3ff
+            }
+            
+            .blink.active {
+                text-shadow: 0rem 0rem 30rem #00a3ff;
+                opacity: 1;
+                color: #ffffff;
+            }
+            
+            .blink.done {
+                opacity: 1;
+                color: #ffffff;
+            }
+	        
+        </style>
+    </head>
+    <body>
+        
+        <!-- Plugins -->
+        <script type="text/javascript" src='./packages/jquery-1.11.1/jquery-1.11.1.min.js'></script>
+        
+        <!-- Body -->
+    	<h1 class='blink'>Viktor Lyresten</h1>
+    	<div class='service-wrapper'>
+    	
+	    	<a class='service twitter blink link'  href="http://twitter.com/viktorlyresten" target="_top">
+	    		<i class='icon fa fa-twitter'></i>
+	    		<p class='name'>twitter</p>
+	    		<p class='description'>@viktorlyresten</p>
+	    	</a>
+	    	
+	    	<a class='service mail blink link'  href="mailto:viktor@lyresten.se" target="_top">
+	    		<i class='icon fa fa-envelope'></i>
+	    		<p class='name'>email</p>
+	    		<p class='description'>viktor@lyresten.se</p>
+	    	</a>
+	    	
+	    	<a class='service sms blink link' id="sms-button" href="imessage://viktor@lyresten.se" target="_top">
+	    		<i class='icon fa fa-comments'></i>
+	    		<p class='name'>imessage</p>
+	    		<p class='description'>viktor@lyresten.se</p>
+	    	</a>
+	    	
+	    	<a class='service skype blink link' id="skype-button">
+	    		<i class='icon fa fa-skype'></i>
+	    		<p class='name'>skype</p>
+	    		<p class='description'>viktorlyresten</p>
+	    	</a>
+	    	
+	    	<a class='service steam blink link'  href="http://steamcommunity.com/id/viktorlyresten/" target="_top">
+	    		<i class='icon fa fa-steam'></i>
+	    		<p class='name'>steam</p>
+	    		<p class='description'>lyret</p>
+	    	</a>
+	    	
+	    	<a class='service dropbox blink link' href="http://www.dropbox.com" target="_top">
+	    		<i class='icon fa fa-dropbox'></i>
+	    		<p class='name'>dropbox</p>
+	    		<p class='description'>viktor@lyresten.se</p>
+	    	</a>
+	    	
+	    	<a class='service stackoverflow blink link'  href="http://stackoverflow.com/users/2791694/viktor-lyresten" target="_top">
+	    		<i class='icon fa fa-stack-overflow'></i>
+	    		<p class='name'>stack overflow</p>
+	    		<p class='description'>user:2791694</p>
+	    	</a>
+	    	
+	    	<a class='service linkedin blink link' href="http://www.linkedin.com/profile/view?id=368900746">
+	    		<i class='icon fa fa-linkedin'></i>
+	    		<p class='name'>linked in</p>
+	    		<p class='description'>Viktor Lyresten</p>
+	    	</a>
+	    	
+	    	<a class='service github blink link' href="https://github.com/lyret">
+	    		<i class='icon fa fa-github'></i>
+	    		<p class='name'>github</p>
+	    		<p class='description'>Lyret</p>
+	    	</a>
+	    	
+	    	
+	    	<p class="service-stop"></p>
+    	</div>
+        
+        <!-- Link the Skype plugin -->
+        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+        <div id="SkypeButton_Call_viktorlyresten_1">
+        <script type="text/javascript">
+            Skype.ui({
+              "name": "chat",
+              "element": "SkypeButton_Call_viktorlyresten_1",
+              "participants": ["viktorlyresten"],
+              "imageSize": 32
+            });
+        </script>
+        </div>
+  
+        <!-- background image chooser -->
+        <script type="text/javascript">
+            b = []; n = 0;
+            b[n++] = "<img src='http://giant.gfycat.com/AdolescentSaltyKoala.gif' class='background-image'>";
+            /*b[n++] = "<img src='./images/rainbow.gif' class='background-image right'>";
+            b[n++] = "<img src='./images/audio.gif' class='background-image'>";
+            b[n++] = "<img src='./images/circle.gif' class='background-image right'>";
+            b[n++] = "<img src='./images/colors.gif' class='background-image'>";
+            b[n++] = "<img src='./images/cube.gif' class='background-image'>";
+            b[n++] = "<img src='./images/mandelbrot.gif' class='background-image'>";
+            b[n++] = "<img src='./images/metal.gif' class='background-image right'>";
+            b[n++] = "<img src='./images/noration.gif' class='background-image'>";
+            b[n++] = "<img src='./images/psycho.gif' class='background-image'>";
+            b[n++] = "<img src='./images/sculpture.gif' class='background-image right'>";
+            b[n++] = "<img src='./images/train.gif' class='background-image right'>";
+            b[n++] = "<img src='./images/triangles.gif' class='background-image right'>";
+            b[n++] = "<img src='./images/wiggle.gif' class='background-image right'>";*/
+            i = 0; //Math.floor(Math.random() * n);
+            document.write( b[ i ] );
+        </script>
+        
+            
+        <script type="text/javascript" >
+            $(document).ready(function() {
+            
+                // Blink all elements on page load
+                setTimeout(
+                  function() 
+                  {
+                    $('.blink').addClass('active');
+                  }, 100);
+                
+                setTimeout(
+                  function() 
+                  {
+                    $('.blink').removeClass('active').addClass('done');
+                  }, 1100);
+                
+                
+                // Overload the Skype plugin
+                $("#SkypeButton_Call_viktorlyresten_1").hide();
+                $("#skype-button").click(function() { $("#SkypeButton_Call_viktorlyresten_1_paraElement").children()[0].click(); });
+            
+                // Find iOs devices, change the sms link
+                p = navigator.platform;
+
+                if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ){
+                    $("#sms-button").attr("href", "sms:viktor@lyresten.se");
+                }
+            });
+        </script>
+        -->
+    </body>
+</html>
