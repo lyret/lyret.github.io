@@ -1,4 +1,4 @@
 lyret.github.io
 ===============
 
-My webpage.
+My personal get-in-touch webpage.
