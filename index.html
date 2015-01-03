@@ -8,15 +8,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="apple-mobile-web-app-capable" content="no">
         <meta name="viewport" content="width=700">
-        <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">        
+        <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
         
         <style>
         
-            /* This hides the description, possibly just set temporary */
-            p.description {
+            /* This hides all descriptions, possibly just set temporary */
+            p.description, p.sitedescription {
                 display: none;
             }
-            
+
+        
 			html {
 		        background: black;
 		        color: white;
@@ -27,7 +28,6 @@
 	        * {margin: 0; padding: 0;}
 	        
             .background-image {
-                position: fixed;
                 top: 0;
                 left: 0;
                 min-height: 100%;
@@ -35,6 +35,7 @@
                 height: auto;
                 z-index: -1;
                 opacity: 0.28;
+                image-fit: fill;
             }
             
             .background-image.right {
@@ -43,9 +44,15 @@
             }
 	        
 	        h1 {
-		        font-size: 92rem;
+		        font-size: 40rem;
 		        font-weight: 300;
-		        margin: 24rem 32rem 24rem;
+		        margin: 24rem 24rem 24rem 40rem;
+	        }
+	        
+	        p.sitedescription {
+    	        font-size: 20rem;
+		        font-weight: 100;
+		        margin-left: 32rem;
 	        }
 	        
 	        h2 {
@@ -55,17 +62,17 @@
 	        }
             
             .service-wrapper {
-                max-width: 700px;
+                max-width: 500rem;
             }
 	        
 	        .service {
 	        	display: table-cell;
 	        	min-width: 128rem;
 	        	height: 33%;
-	        	height: 128rem;
+	        	height: 88rem;
 		        text-align: center;
 		        text-transform: lowercase;
-		        margin: 18rem;
+		        margin: 4rem;
 		        float: left;
                 transition: all s;
                 text-decoration: none;
@@ -81,12 +88,12 @@
 	        
 	        .service .icon {
 	        	margin-top: 8rem;
-		        font-size: 80rem;
+		        font-size: 28rem;
 		        padding-bottom: 0;
 	        }
 	        
 	        .service .name {
-		        font-size: 24rem;
+		        font-size: 16rem;
 		        font-weight: 300;
 		        margin: 0;
 	        }
@@ -120,9 +127,14 @@
         
         <!-- Plugins -->
         <script type="text/javascript" src='./packages/jquery-1.11.1/jquery-1.11.1.min.js'></script>
+        <script type="text/javascript" src='./packages/jquery.videoBG/jquery.videoBG.js'></script>
         
         <!-- Body -->
-    	<h1 class='blink'>Viktor Lyresten</h1>
+    	<h1 class='blink'>viktor lyresten</h1>
+    	<p class='sitedescription'>Hi, my name is Viktor Lyresten and this is my webpage about myself, my life so far and stuff that I'm working on.
+        	<br/><br/>
+        	<b>Here is how to get in touch with me:</b>
+        </p>
     	<div class='service-wrapper'>
     	
 	    	<a class='service twitter blink link'  href="http://twitter.com/viktorlyresten" target="_top">
@@ -155,11 +167,13 @@
 	    		<p class='description'>lyret</p>
 	    	</a>
 	    	
+<!--
 	    	<a class='service dropbox blink link' href="http://www.dropbox.com" target="_top">
 	    		<i class='icon fa fa-dropbox'></i>
 	    		<p class='name'>dropbox</p>
 	    		<p class='description'>viktor@lyresten.se</p>
 	    	</a>
+-->
 	    	
 	    	<a class='service stackoverflow blink link'  href="http://stackoverflow.com/users/2791694/viktor-lyresten" target="_top">
 	    		<i class='icon fa fa-stack-overflow'></i>
@@ -181,10 +195,11 @@
 	    	
 	    	
 	    	<p class="service-stop"></p>
-    	</div>
+	    	</div>
+    	
         
         <!-- Link the Skype plugin -->
-        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>        
         <div id="SkypeButton_Call_viktorlyresten_1">
         <script type="text/javascript">
             Skype.ui({
@@ -199,7 +214,7 @@
         <!-- background image chooser -->
         <script type="text/javascript">
             b = []; n = 0;
-            b[n++] = "<img src='./images/AdolescentSaltyKoala.gif' class='background-image'>";
+            //b[n++] = "<img src='./images/AdolescentSaltyKoala.gif' class='background-image'>";
             /*b[n++] = "<img src='./images/rainbow.gif' class='background-image right'>";
             b[n++] = "<img src='./images/audio.gif' class='background-image'>";
             b[n++] = "<img src='./images/circle.gif' class='background-image right'>";
@@ -215,10 +230,26 @@
             b[n++] = "<img src='./images/wiggle.gif' class='background-image right'>";*/
             i = 0; //Math.floor(Math.random() * n);
             document.write( b[ i ] );
+            
+            $('body').videoBG({
+        		position:"fixed",
+        		zIndex:-1,
+        		mp4:'http://fat.gfycat.com/AdolescentSaltyKoala.mp4',
+        		webm:'http://fat.gfycat.com/AdolescentSaltyKoala.webm',
+        		poster: 'http://thumbs.gfycat.com/AdolescentSaltyKoala-poster.jpg',
+        		opacity:.5,
+        		sclae: true,
+        		loop: true
+        	});
         </script>
-        
             
         <script type="text/javascript" >
+            $( window ).resize(function() {
+                $('.videoBG').css("width",$( window ).width());
+                $('.videoBG').css("min-height",$( window ).height());
+                $('.videoBG').css("height","auto");
+            });
+
             $(document).ready(function() {
             
                 // Blink all elements on page load
