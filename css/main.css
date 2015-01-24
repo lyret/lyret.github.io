@@ -19,12 +19,53 @@ html {
 
 .container-fluid {
     padding: 0;
-    margin-left: 32rem;
+    margin-left: 0rem;
 }
 
 * {margin: 0; padding: 0;}
 
 
+/* Carousel */
+
+.carousel {
+    width: 100%;
+    margin-left: 32rem;
+    color: white;
+    font-size: 20rem;
+}
+
+.carousel-indicators {
+    top: 81%;
+}
+
+.carousel-caption {
+    font-family: 'Lato', 'Arial', sans-serif !important;
+    top: 73%;
+    font-size: 20rem;
+    text-transform: lowercase;
+}
+
+.carousel .item p {
+    font-family: 'Lato', 'Arial', sans-serif !important;
+    margin-top: 60rem;
+    font-size: 20rem;
+}
+
+
+.carousel img {
+    width: 100%;
+    border-radius: 15rem;
+}
+
+.carousel-inner,.carousel,.item,.container,.fill {
+  height:100%;
+  width:100%;
+}
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
 
 /* Background Video / Image */
 
@@ -46,6 +87,22 @@ html {
 
 
 
+/* Links */
+
+a {
+    text-decoration: underline;
+    color: white;
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0rem 0rem 20rem #00a3ff;
+    cursor: hand;
+}
+
+
 /* Headlines */
 
 h1 {
@@ -54,25 +111,33 @@ h1 {
     margin: 40rem 0rem 24rem 32rem;
 }
 
+h1 a {
+    text-decoration: none;
+}
+
 p.sitedescription {
     font-size: 20rem;
     font-weight: 200;
     margin-left: 32rem;
+    margin-bottom: 30rem;
     color: white;
 }
 
 h2 {
     font-size: 32rem;
     font-weight: 300;
-    margin: 24rem 32rem 24rem;
+    margin: 24rem 32rem 10rem;
 }
 
 /* Footer */
 
 footer {
-    margin-left: 64rem;
+    margin-left: 32rem;
     color: white;
+    padding: 0;
 }
+
+
 
 /* Contact services */
 
@@ -85,7 +150,7 @@ footer {
     text-transform: lowercase;
     margin: 1rem;
     float: left;
-    transition: all s;
+    transition: all 0.2s;
     text-decoration: none;
 }
 .service-stop {
