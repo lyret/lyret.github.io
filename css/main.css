@@ -1,0 +1,144 @@
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+/* Default styling */
+
+htm, body, div {
+    background: none;
+}
+
+html {
+    background: black;
+    color: white;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 1px;
+    font-weight: 300;
+}
+
+.container-fluid {
+    padding: 0;
+    margin-left: 32rem;
+}
+
+* {margin: 0; padding: 0;}
+
+
+
+/* Background Video / Image */
+
+.background-image {
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    z-index: -1;
+    opacity: 0.28;
+    image-fit: fill;
+}
+
+.background-image.right {
+    left: auto;
+    right: 0;
+}
+
+
+
+/* Headlines */
+
+h1 {
+    font-size: 40rem;
+    font-weight: 300;
+    margin: 40rem 0rem 24rem 32rem;
+}
+
+p.sitedescription {
+    font-size: 20rem;
+    font-weight: 200;
+    margin-left: 32rem;
+    color: white;
+}
+
+h2 {
+    font-size: 32rem;
+    font-weight: 300;
+    margin: 24rem 32rem 24rem;
+}
+
+/* Footer */
+
+footer {
+    margin-left: 64rem;
+    color: white;
+}
+
+/* Contact services */
+
+.service {
+	display: table-cell;
+	min-width: 100rem;
+	height: 33%;
+	height: 88rem;
+    text-align: center;
+    text-transform: lowercase;
+    margin: 1rem;
+    float: left;
+    transition: all s;
+    text-decoration: none;
+}
+.service-stop {
+    clear: both;
+}
+
+.service.link:hover {
+    text-shadow: 0rem 0rem 20rem #00a3ff;
+    cursor: hand;
+}
+
+.service .icon {
+	margin-top: 8rem;
+    font-size: 28rem;
+    padding-bottom: 0;
+}
+
+.service .name {
+    font-size: 16rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.service .description {
+    font-size: 14rem;
+    font-weight: 300;
+    margin: 0;
+    display: none;
+}
+
+.blink {
+    transition: all 1s;
+    opacity: 0;
+    color: #00a3ff
+}
+
+.blink.active {
+    text-shadow: 0rem 0rem 30rem #00a3ff;
+    opacity: 1;
+    color: #ffffff;
+}
+
+.blink.done {
+    opacity: 1;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
