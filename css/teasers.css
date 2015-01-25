@@ -9,7 +9,7 @@
 .carousel {
     border-radius: 10px;
     color: black;
-    margin-left: 32rem;
+    margin-left: 0rem;
     color: white;
     font-size: 20rem;
 }
@@ -26,14 +26,19 @@
 
 .carousel-control, .carousel-control:hover {
     background: none !important;
-    display: none;
+    margin-top: 0%;
+    top: 0rem !important;
+}
+
+.carousel-control span {
+    font-size: 24rem !important;
 }
 
 .carousel .item p {
     font-family: 'Lato', 'Arial', sans-serif !important;
     font-size: 20rem;
     font-weight: 300;
-    padding: 20rem;
+    padding: 0rem;
     padding-top: 40rem;
 }
 
