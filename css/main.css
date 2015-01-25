@@ -43,6 +43,14 @@ html {
     right: 0;
 }
 
+.static-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    opacity: 0.5;
+}
+
 
 
 /* Links */
