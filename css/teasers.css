@@ -33,6 +33,7 @@
 
 .carousel-control, .carousel-control:hover {
     background: none !important;
+    display: none;
 }
 
 .carousel .item p {
