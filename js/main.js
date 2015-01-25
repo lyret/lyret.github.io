@@ -5,9 +5,10 @@
 
 // Create a video background
 
+/*
 $('body').videoBG({
 	position:"fixed",
-	zIndex:-1,
+	zIndex: -1000,
 	mp4:'img/AdolescentSaltyKoala.mp4',
 	webm:'img/AdolescentSaltyKoala.webm',
 	poster: 'img/AdolescentSaltyKoala-poster.jpg',
@@ -15,19 +16,23 @@ $('body').videoBG({
 	sclae: true,
 	loop: true
 });
+*/
 
 // Create a function for correcting the backgrounds size
 
 function correctBackground() {
+/*
         $('.videoBG').css("min-width",$( window ).width());
         $('.videoBG').css("min-height",$( window ).height());
         $('.videoBG').css("height","auto");
+*/
+        $('.static-background').css("min-width",$( window ).width());
+        $('.static-background').css("min-height",$( window ).height());
+        $('.static-background').css("height","auto");
 }
-
+$('.videoBG').css('display','none');
 $( window ).resize(correctBackground); // Trigger it on window resize
 correctBackground(); // Trigger on window load
-
-
 
 // Blink all elements on page load
 setTimeout(

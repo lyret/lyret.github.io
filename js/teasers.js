@@ -22,9 +22,9 @@ $('body').videoBG({
 // Create a function for correcting the backgrounds size
 
 function correctBackground() {
-        $('.videoBG').css("min-width",$( window ).width());
-        $('.videoBG').css("min-height",$( window ).height());
-        $('.videoBG').css("height","auto");
+        $('.static-background').css("min-width",$( window ).width());
+        $('.static-background').css("min-height",$( window ).height());
+        $('.static-background').css("height","auto");
 }
 
 $( window ).resize(correctBackground); // Trigger it on window resize
