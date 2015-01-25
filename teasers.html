@@ -16,13 +16,14 @@
         <link rel='stylesheet' href='js/font-awesome/css/font-awesome.min.css'>
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/teasers.css">
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+    
         <!-- Content -->
         
         <div class="container-fluid">
@@ -44,8 +45,6 @@
             </div>
                         
             <!-- Teaser Portfolio -->
-            <div class="row">
-                <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
                     <section class="block">
                         <div id="teaser-portfolio" class="carousel slide" data-ride="carousel">
                         
@@ -57,47 +56,36 @@
                             </ol>
                         
                             <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <img src="teasers/ContextDesktop.png">
-                                    <div class="carousel-caption">
-                                        <b>Context Desktop</b>
-                                    </div>
-                                    <div>
-                                    <p>This mac application sits in the menu bar and allows you to select any folder to display on the desktop, great for switching between different projects.</p>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="teaserimg/ContextDesktop.png">
+                                    
+                                            <p><b>Context Desktop</b><br/>This mac application sits in the menu bar and allows you to select any folder to display on the desktop, great for switching between different projects.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                
                             </div>
                             
                             <!-- Controls -->
-                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <a class="left carousel-control pull-left" href="#teaser-portfolio" role="button" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <a class="right carousel-control pull-right" href="#teaser-portfolio" role="button" data-slide="next">
                                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
                     </section>
-                </div>
-            </div>
         <footer>
             <p>&copy; 2015</p>
         </footer>
-    
-        <!-- Link the Skype plugin -->
-        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>        
-        <div id="SkypeButton_Call_viktorlyresten_1">
-        <script type="text/javascript">
-            Skype.ui({
-              "name": "chat",
-              "element": "SkypeButton_Call_viktorlyresten_1",
-              "participants": ["viktorlyresten"],
-              "imageSize": 32
-            });
-        </script>
+        
+        <!-- Static Background -->
+        
+        <img class="videoBG" src="img/AdolescentSaltyKoala-poster.jpg"/>
         
         <!-- Scripts -->
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
@@ -105,9 +93,8 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src='js/vendor/jquery.videoBG.js'></script>
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        
-       
+        <script src="js/teasers.js"></script>
+           
         </div>
 
         <!-- Google Analytics (change UA-XXXXX-X to site ID.) -->

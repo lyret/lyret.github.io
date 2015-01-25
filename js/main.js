@@ -19,7 +19,7 @@ $('body').videoBG({
 // Create a function for correcting the backgrounds size
 
 function correctBackground() {
-        $('.videoBG').css("width",$( window ).width());
+        $('.videoBG').css("min-width",$( window ).width());
         $('.videoBG').css("min-height",$( window ).height());
         $('.videoBG').css("height","auto");
 }

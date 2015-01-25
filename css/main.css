@@ -15,6 +15,7 @@ html {
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 1px;
     font-weight: 300;
+    padding: 20px;
 }
 
 .container-fluid {
@@ -23,49 +24,6 @@ html {
 }
 
 * {margin: 0; padding: 0;}
-
-
-/* Carousel */
-
-.carousel {
-    width: 100%;
-    margin-left: 32rem;
-    color: white;
-    font-size: 20rem;
-}
-
-.carousel-indicators {
-    top: 81%;
-}
-
-.carousel-caption {
-    font-family: 'Lato', 'Arial', sans-serif !important;
-    top: 73%;
-    font-size: 20rem;
-    text-transform: lowercase;
-}
-
-.carousel .item p {
-    font-family: 'Lato', 'Arial', sans-serif !important;
-    margin-top: 60rem;
-    font-size: 20rem;
-}
-
-
-.carousel img {
-    width: 100%;
-    border-radius: 15rem;
-}
-
-.carousel-inner,.carousel,.item,.container,.fill {
-  height:100%;
-  width:100%;
-}
-
-.carousel .item {
-    width: 100%; /*slider width*/
-    max-height: 600px; /*slider height*/
-}
 
 /* Background Video / Image */
 
@@ -124,9 +82,9 @@ p.sitedescription {
 }
 
 h2 {
-    font-size: 32rem;
+    font-size: 0rem;
     font-weight: 300;
-    margin: 24rem 32rem 10rem;
+    margin: 24rem 0rem 10rem;
 }
 
 /* Footer */
