@@ -110,15 +110,17 @@ footer {
 .service {
 	display: table-cell;
 	height: 33%;
-	padding-right: 35rem;
 	height: 88rem;
     text-align: center;
     text-transform: lowercase;
-    margin: 1rem;
+    margin-left: -32rem;
     float: left;
     transition: all 0.2s;
     text-decoration: none;
+    min-width: 134px;
 }
+
+
 .service-stop {
     clear: both;
 }
@@ -138,6 +140,12 @@ footer {
     font-size: 16rem;
     font-weight: 300;
     margin: 0;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.service:hover .name {
+    opacity: 1;
 }
 
 .service .description {
