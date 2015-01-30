@@ -25,6 +25,20 @@ html {
 
 * {margin: 0; padding: 0;}
 
+
+/* avatar pic */
+
+#nicpic {
+    border: 2px solid white;
+    width: 70rem;
+    height: auto;
+    margin-right: 20rem;
+}
+
+#nicpic:hover {
+    width: 250rem;
+}
+
 /* Background Video / Image */
 
 .background-image {
