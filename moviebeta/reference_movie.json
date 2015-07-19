@@ -1,0 +1,14 @@
+Object = $1
+director: "Christian Ryltenius"
+directorids: [{director: {name: "Christian Ryltenius", id: "322217"}}] (1)
+filmtipsetgrade: {count: "366", value: "4"}
+grade: {count: "366", value: "4", type: "official"}
+id: "108581"
+image: "http://images.filmtipset.se/posters/34838977.jpg"
+imdb: "3129656"
+length: "60"
+name: "Bamse och tjuvstaden"
+orgname: "Bamse och tjuvstaden"
+url: "http://www.filmtipset.se/film/bamse-och-tjuvstaden.html"
+year: "2014"
+Object Prototype

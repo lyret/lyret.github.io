@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Moviebeta</title>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/grayscale.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+        
+        <!-- Javascript Libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ractive/0.7.3/ractive.min.js"></script>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script src="lib/filmtipset.js"></script>
+        
+        <!-- Style -->
+        <style>
+            html {
+                font-size: 1px;
+            }
+            
+            #root {
+                margin-top: 60rem;
+            }
+            
+            .row-header {
+                margin-bottom: 20rem;
+            }
+            
+            .col-poster {
+            }
+            
+            *, *:before, *:after {box-sizing:  border-box !important;}
+            
+            
+            .row-grid {
+             -moz-column-width: 17em;
+             -webkit-column-width: 17em;
+             -moz-column-gap: -1em;
+             -webkit-column-gap: -1em; 
+              
+            }
+            
+            .row-grid .col {
+             display: inline-block;
+             margin:  25rem;
+             padding:  1rem;
+             width:  100%; 
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div class="container">
+            
+            <!-- App Root -->
+            <div id="root">
+              
+                <!-- Placeholder content -->
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" style="width: 100%">
+                        <span>Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Template -->
+        
+        
+        <script type="text/html" id="app_template">
+            
+            <!-- Movie Details View -->
+            {{#partial movieDetails}}
+            <h2>{{currentMovie.Name}}</h2>
+            <h4>Regissör:</h4>
+            <h5>{{currentMovie.Director}}&nbsp;</h5>
+            <h4>Längd:</h4>
+            <h5>{{currentMovie.Length}}&nbsp;min</h5>
+            <h4>Orginaltitel:</h4>
+            <h5>{{currentMovie.OriginalName}}</h5>
+            <button type="button" class="btn" on-click="view-grid">Stäng</button>
+            {{/partial}}
+            
+            
+            <!-- Movie Grid View -->
+            {{#partial movieGrid}}
+            <div class="row">
+                <div class="col-xs-12 text-center text-primary">
+                    <h1>moviebeta</h1>
+                </div>
+            </div>
+            <div class="row row-header">
+                <div class="col-xs-offset-3 col-xs-6">
+                    <form class="form-horizontal">
+                        <input type="search"
+                               class="form-control"
+                               value="{{ movieFilter }}"
+                               placeholder="sök"
+                        />
+                    </form>
+                </div>
+                <div class="col-xs-12 text-center text-danger">
+                    <br/>
+                    <h3>filmer som just nu går på bio</h3>
+                </div>
+            </div>
+            
+            <div class="row row-grid row-posters">
+                
+                {{#each movies()}}
+                <div class="col col-poster text-center">
+                    <a href="#" on-click="view-movie:{{this}}">
+                        <img src="{{this.ImageUrl}}" class="img-poster center-block"/>
+                        <br/>
+                        {{#if movieFilter && this.MatchedName}}
+                            <h4>{{{this.MatchedName}}}</h4>
+                        {{else}}
+                            <h4>{{this.Name}}</h4>
+                        {{/if}}
+                        {{#if movieFilter && this.MatchedAttribute}}
+                            <h4 class="text-warning">{{{this.MatchedAttribute}}}</h4>
+                        {{/if}}
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+            {{/partial}}
+            
+            
+            <!-- View Selection -->
+            {{#if currentMovie}}
+                {{> movieDetails}}
+            {{else}}
+                {{> movieGrid}}
+            {{/if}}
+            
+        </script>
+        
+        <!-- Theme Scripts -->
+        <script src="js/grayscale.js"></script>
+        
+        <!-- Application Scripts -->
+        <script src="app.js"></script>
+    </body>
+</html>
